@@ -3,7 +3,7 @@
 ### data for training
 - Download the stage1 and stage2 image data from [Video LLaVA]([Video-LLaVA/TRAIN_AND_VALIDATE.md at main · PKU-YuanGroup/Video-LLaVA (github.com)](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md)), for video data, we provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
 - Download the stage1 and stage2 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
-- Download the stage3 data, we provide the generated video clip feature and the required images, you can download from  [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b) , for [GOT10k](http://got-10k.aitestunion.com/) and [MGIT](http://videocube.aitestunion.com/), we don't provide their images, you can download from their official website.
+- Download the stage3 data, we provide the generated video clip feature and the required images, you can download from  [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b) , for [MeViS](https://codalab.lisn.upsaclay.fr/competitions/15094), [GOT10k](http://got-10k.aitestunion.com/) and [MGIT](http://videocube.aitestunion.com/), we don't provide their images, you can download from their official website.
 - Download the stage3 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
 
 After downloading all of them, organize the data as follows in ```DATA_ROOT```. 
@@ -15,18 +15,22 @@ DATA_ROOT
 ├── valley
 ├── videochatgpt_tune
 └── Artemis_data
-				├──HC-STVG
-				├──MeViS_release
-				├──A2D_sentences
-				├──VID-sentence
-				├──GOT-10k
-				├──LaSOT
-				└── MGIT
+		├──HC-STVG
+		├──MeViS_release
+		├──A2D_sentences
+		├──VID-sentence
+		├──GOT-10k
+			├──clip_feature
+			└── data/full_data/train				
+		├──LaSOT
+		└── MGIT
+			├──clip_feature
+			└── MGIT-Train	
 ```
 
 ### data for validating
 - For video, videos and annotations for video qa, you can download from [Video LLaVA]([Video-LLaVA/TRAIN_AND_VALIDATE.md at main · PKU-YuanGroup/Video-LLaVA (github.com)](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md)) , we also provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
-- For Video-ChatGPT benchmark, you can download from [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/blob/main/quantitative_evaluation/README.md), we also provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
+- For Video-ChatGPT benchmark, you can download from [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/blob/main/quantitative_evaluation/README.md), we also provide the generated video clip feature, you can download .
 
 ## Training
 Specify your `DATA_ROOT` according to the data preparation.
@@ -41,6 +45,8 @@ You can refer to the official repository for validation, but we also provide [of
 
 To load unmerged LoRA weights, you simply need to pass an additional argument `--model-base`, which is the base LLM that is used to train the LoRA weights. 
 
+For VideoRefBench 
+
 ### VideoRefBench
 
 ​	1. Inference to get the result.
@@ -52,7 +58,7 @@ bash scripts/eval/run_artemis_bench.sh
 ​	2. Evaluation.
 
 ```
-bash scripts/eval/eval_artemisbench.sh
+python get_score_metric.py --file_path /path/to/test/file.jsonl\json
 ```
 
 ### MSRVTT-QA
