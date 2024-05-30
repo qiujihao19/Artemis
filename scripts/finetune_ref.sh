@@ -1,6 +1,6 @@
 
 IMAGE_FOLDER=""
-VIDEO_FOLDER="/path/to/Artemis_data"
+VIDEO_FOLDER="/path/to/DATA_ROOT/Artemis_data"
 DATA_FOLDER="/path/to/videoref_json"
 cd /path/to/Artemis
 
