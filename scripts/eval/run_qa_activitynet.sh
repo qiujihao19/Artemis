@@ -10,7 +10,7 @@ gt_file_answers="${GPT_Zero_Shot_QA}/Activitynet_Zero_Shot_QA/test_a.json"
 output_dir="${GPT_Zero_Shot_QA}/Activitynet_Zero_Shot_QA/${CKPT_NAME}"
 
 
-gpu_list="${CUDA_VISIBLE_DEVICES:-6,7}"
+gpu_list="${CUDA_VISIBLE_DEVICES:-0,1,2,3,4,5,6,7}"
 IFS=',' read -ra GPULIST <<< "$gpu_list"
 
 CHUNKS=${#GPULIST[@]}

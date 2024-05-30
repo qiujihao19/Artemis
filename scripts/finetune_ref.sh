@@ -1,7 +1,7 @@
 
 IMAGE_FOLDER=""
-VIDEO_FOLDER="/path/to/artemis_dataset"
-DATA_FOLDER="/path/to/train_json"
+VIDEO_FOLDER="/path/to/Artemis_data"
+DATA_FOLDER="/path/to/videoref_json"
 cd /path/to/Artemis
 
 export PYTHONPATH="path/:${PYTHONPATH}"

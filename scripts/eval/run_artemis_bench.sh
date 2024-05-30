@@ -3,7 +3,7 @@
 model_path="checkpoints/${CKPT_NAME}"
 model_base="checkpoints/Artemis-7b-ftune"
 cache_dir="./cache_dir"
-hc_stvg_val_file="/path/to/HC-STVG/hc_stvg_val.json"
+hc_stvg_val_file="/path/to/videoref_json/videorefbench_json/hc_stvg_val.json"
 video_dir="/path/to/artemis_dataset"
 output_dir="${video_dir}/${CKPT_NAME}"
 choose_mode="average"

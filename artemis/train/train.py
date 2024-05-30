@@ -643,6 +643,7 @@ class LazyReferringSupervisedDataset(Dataset):
         list_data_dict = []
         for path in data_path:
             train_file = os.listdir(path)
+            train_file = [i for i in train_file if i.endswith('.json')]
             for file in train_file:
                 data = json.load(open(os.path.join(path, file), "r"))
                 for i in data:
@@ -712,22 +713,18 @@ class LazyReferringSupervisedDataset(Dataset):
             tracklist = self.list_data_dict[i]['track_list']
             frame_path = self.list_data_dict[i]['frame_path']
             frame_id = self.list_data_dict[i]['frame_id']
-            choosen_frame_id = self.list_data_dict[i].get('choosen_frame_id', None)
+
             no_fai_bbox_list = [ele for ele in range(len(tracklist)) if tracklist[ele] != []]
-            if self.data_args.choosen_mode == 'entroy' and choosen_frame_id != None and len(choosen_frame_id) == self.data_args.num_inputbox:
-                img_idx_list = [frame_id.index(frame_name) for frame_name in choosen_frame_id]
-                img_idx_list.sort()
-            else:
-                if len(no_fai_bbox_list) > self.data_args.num_trackbox:
-                    if self.data_args.choosen_mode == 'average':
-                        img_idx_list = self.avg(no_fai_bbox_list, self.data_args.num_trackbox)
-                    else:
-                        img_idx_list = random.sample(no_fai_bbox_list, self.data_args.num_trackbox)
+            if len(no_fai_bbox_list) > self.data_args.num_trackbox:
+                if self.data_args.choosen_mode == 'average':
+                    img_idx_list = self.avg(no_fai_bbox_list, self.data_args.num_trackbox)
                 else:
-                    img_idx_list = no_fai_bbox_list
-                    for j in range((self.data_args.num_trackbox - len(img_idx_list))):
-                        img_idx_list.append(img_idx_list[-1])
-                img_idx_list.sort()
+                    img_idx_list = random.sample(no_fai_bbox_list, self.data_args.num_trackbox)
+            else:
+                img_idx_list = no_fai_bbox_list
+                for j in range((self.data_args.num_trackbox - len(img_idx_list))):
+                    img_idx_list.append(img_idx_list[-1])
+            img_idx_list.sort()
                 
             img_list = []
             box_list = []

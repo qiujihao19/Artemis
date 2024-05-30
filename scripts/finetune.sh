@@ -1,8 +1,8 @@
 
 
 JSON_FOLDER="/path/to/train_json"
-IMAGE_FOLDER="/path/to/llava_finetune"
-VIDEO_FOLDER="/path/to/video_clip_feature"
+IMAGE_FOLDER="/path/to/DATA_ROOT/"
+VIDEO_FOLDER="/path/to/DATA_ROOT/"
 
 cd /path/to/Artemis
 

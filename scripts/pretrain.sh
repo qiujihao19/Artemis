@@ -1,7 +1,7 @@
 
 JSON_FOLDER="/path/to/train_json"
-IMAGE_FOLDER="/path/to/LLaVA-Pretrain/images"
-VIDEO_FOLDER="/path/to/valley/"
+IMAGE_FOLDER="/path/to/DATA_ROOT/"
+VIDEO_FOLDER="/path/to/DATA_ROOT/"
 
 cd /path/to/Artemis
 export PYTHONPATH="$/path/to/Artemis:${PYTHONPATH}"
@@ -9,7 +9,7 @@ HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed artemis/train/train_mem.p
     --deepspeed ./scripts/zero2.json \
     --model_name_or_path /path/to/vicuna-v1.5-7b/ \
     --version v1 \
-    --data_path ${JSON_FOLDER}/llava_image_.json ${JSON_FOLDER}/valley_processed_.json \
+    --data_path ${JSON_FOLDER}/llava_image_.json ${JSON_FOLDER}/valley_.json \
     --image_folder ${IMAGE_FOLDER} \
     --image_tower /path/to/clip-vit-large-patch14 \
     --video_folder ${VIDEO_FOLDER} \
