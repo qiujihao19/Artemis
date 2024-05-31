@@ -29,8 +29,8 @@ DATA_ROOT
 ```
 
 ### data for validating
-- For video, videos and annotations for video qa, you can download from [Video LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md) , we also provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
-- For Video-ChatGPT benchmark, you can download from [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/blob/main/quantitative_evaluation/README.md), we also provide the generated video clip feature, you can download .
+- For video, videos and annotations for video qa, you can download from [Video LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md) , we also provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z).
+- For Video-ChatGPT benchmark, you can download from [Video-ChatGPT](https://github.com/mbzuai-oryx/Video-ChatGPT/blob/main/quantitative_evaluation/README.md), we also provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z).
 
 ## Training
 Specify your `DATA_ROOT` according to the data preparation.
@@ -58,7 +58,7 @@ bash scripts/eval/run_artemis_bench.sh
 ​	2. Evaluation.
 
 ```
-python get_score_metric.py --file_path /path/to/test/file.jsonl\json
+python utils/get_score_metric.py --file_path /path/to/test/file.jsonl\json
 ```
 
 ### MSRVTT-QA
