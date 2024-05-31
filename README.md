@@ -45,6 +45,7 @@ pip install flash-attn --no-build-isolation
 pip install decord opencv-python
 pip install torch-kmeans
 pip install pycocoevalcap
+# cuda 11.7
 cd mmcv-1.4.7/
 MMCV_WITH_OPS=1 pip install -e .
 ```

@@ -1,10 +1,10 @@
 ## Data preparation
 
 ### data for training
-- Download the stage1 and stage2 image data from [Video LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md), for video data, we provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
-- Download the stage1 and stage2 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
-- Download the stage3 data, we provide the generated video clip feature and the required images, you can download from  [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b) , for [MeViS](https://codalab.lisn.upsaclay.fr/competitions/15094), [GOT10k](http://got-10k.aitestunion.com/) and [MGIT](http://videocube.aitestunion.com/), we don't provide their images, you can download from their official website.
-- Download the stage3 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1vPZswad5auXlDrmV7JJpdg?pwd=lj8b).
+- Download the stage1 and stage2 image data from [Video LLaVA](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/TRAIN_AND_VALIDATE.md), for video data, we provide the generated video clip feature, you can download from [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z ).
+- Download the stage1 and stage2 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z).
+- Download the stage3 data, we provide the generated video clip feature and the required images, you can download from  [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z) , for [MeViS](https://codalab.lisn.upsaclay.fr/competitions/15094), [GOT10k](http://got-10k.aitestunion.com/) and [MGIT](http://videocube.aitestunion.com/), we don't provide their images, you can download from their official website.
+- Download the stage3 training annotations. You can download from [Baidu Disk](https://pan.baidu.com/s/1iRjfDdpXzEtnHybbcjLbDA?pwd=sn5z).
 
 After downloading all of them, organize the data as follows in ```DATA_ROOT```. 
 
