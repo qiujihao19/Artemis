@@ -17,6 +17,10 @@ DATA_ROOT
 └── Artemis_data
 		├──HC-STVG
 		├──MeViS_release
+			├──clip_feature
+			├──train
+			├──valid
+			└──valid_u
 		├──A2D_sentences
 		├──VID-sentence
 		├──GOT-10k
