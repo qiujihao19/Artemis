@@ -50,12 +50,30 @@ cd mmcv-1.4.7/
 MMCV_WITH_OPS=1 pip install -e .
 ```
 
+## Model
+
+The model base and lora model can be downloaded from [Baidu Disk](https://pan.baidu.com/s/1PDcI8cIWpQUf5rKuBqHqVg?pwd=lbwp )
+
 ## Training & Validating
 
 The training & validating instruction is in [TRAIN_AND_VALIDATE.md](./TRAIN_AND_VALIDATE.md).
 
-
-
 ## Acknowledgment
 
 This project is based on Video LLaVA ([paper](https://arxiv.org/abs/2311.10122), [code](https://github.com/PKU-YuanGroup/Video-LLaVA)), LLaVA ([paper](https://arxiv.org/abs/2304.08485), [code](https://github.com/haotian-liu/LLaVA)),  GPT4RoI ([paper](https://arxiv.org/abs/2307.03601), [code](https://github.com/jshilong/GPT4RoI)), Video-ChatGPT([paper](https://arxiv.org/abs/2306.05424), [code](https://github.com/mbzuai-oryx/Video-ChatGPT)), thanks for their excellent works.
+
+## Citation
+
+If you find Artemis useful for your your research and applications, please cite using this BibTeX:
+
+```
+@misc{qiu2024artemis,
+      title={Artemis: Towards Referential Understanding in Complex Videos}, 
+      author={Jihao Qiu and Yuan Zhang and Xi Tang and Lingxi Xie and Tianren Ma and Pengyu Yan and David Doermann and Qixiang Ye and Yunjie Tian},
+      year={2024},
+      eprint={2406.00258},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
