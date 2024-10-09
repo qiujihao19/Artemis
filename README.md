@@ -4,7 +4,7 @@
   <h1 align="center"><font color="#00003d">Artemis</font></h1>
 </p>
 
-
+Our work has been accepted by NeurIPS2024!
 <h3>Artemis: Towards Referential Understanding in Complex Videos </h3>
 
 
