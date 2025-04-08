@@ -52,7 +52,7 @@ MMCV_WITH_OPS=1 pip install -e .
 
 ## Model
 
-The model base and lora model can be downloaded from [Baidu Disk](https://pan.baidu.com/s/1PDcI8cIWpQUf5rKuBqHqVg?pwd=lbwp )
+The model base and lora model can be downloaded from [Baidu Disk](https://pan.baidu.com/s/1PDcI8cIWpQUf5rKuBqHqVg?pwd=lbwp ) or Huggingface: [model base](https://huggingface.co/ChurchillQAQ/Artemis-7b-ftune), [lora model](https://huggingface.co/ChurchillQAQ/Artemis-7B-lora)
 
 ## Training & Validating
 
